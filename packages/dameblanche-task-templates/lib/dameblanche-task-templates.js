@@ -1,7 +1,7 @@
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 const taskConfig = config.getTaskConfig('templates');
 if (!taskConfig) throw new Error('config is required for templates task');
-const taskRequire = require('dameblanche/lib/taskRequire');
+const taskRequire = require('dameblanche-core/lib/taskRequire');
 
 const browserSync = taskRequire('browsersync').browserSync;
 const data = require('gulp-data');
@@ -11,9 +11,9 @@ const htmlmin = require('gulp-htmlmin');
 const render = require('gulp-nunjucks-render');
 const path = require('path');
 const fs = require('fs');
-const handleErrors = require('dameblanche/lib/handleErrors');
-const customNotifier = require('dameblanche/lib/customNotifier');
-const isProductionBuild = require('dameblanche/lib/isProductionBuild');
+const handleErrors = require('dameblanche-core/lib/handleErrors');
+const customNotifier = require('dameblanche-core/lib/customNotifier');
+const isProductionBuild = require('dameblanche-core/lib/isProductionBuild');
 
 const templatesTask = () => {
     const exclude = path.normalize('!**/{' + taskConfig.excludeFolders.join(',') + '}/**');

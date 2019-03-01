@@ -25,7 +25,7 @@
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
   "devDependencies": {
-    "dameblanche": "^0.0.0",
+    "dameblanche-core": "^0.0.0",
     "dameblanche-task-browsersync": "^0.0.0",
     "dameblanche-task-clean": "^0.0.0",
     "dameblanche-task-css": "^0.0.0",

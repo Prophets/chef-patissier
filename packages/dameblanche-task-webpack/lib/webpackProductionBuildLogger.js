@@ -1,6 +1,6 @@
 const colors = require('ansi-colors');
 const prettifyTime = require('./prettifyTime');
-const handleErrors = require('dameblanche/lib/handleErrors');
+const handleErrors = require('dameblanche-core/lib/handleErrors');
 
 module.exports = (err, stats) => {
     if (err) throw new Error(err);

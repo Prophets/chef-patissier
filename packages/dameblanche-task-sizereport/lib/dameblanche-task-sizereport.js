@@ -1,4 +1,4 @@
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 
 const gulp = require('gulp');
 const sizereport = require('gulp-sizereport');

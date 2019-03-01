@@ -5,7 +5,7 @@ require('@babel/register')({
     ...require('./babelrc')
 });
 
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 
 const taskConfig = config.getTaskConfig('mails');
 if (!taskConfig) throw new Error('config is required for mails task');
@@ -16,17 +16,17 @@ const gulp = require('gulp');
 const path = require('path');
 const fs = require('fs');
 const yaml = require('js-yaml');
-const handleErrors = require('dameblanche/lib/handleErrors');
-const customNotifier = require('dameblanche/lib/customNotifier');
-const isProductionBuild = require('dameblanche/lib/isProductionBuild');
+const handleErrors = require('dameblanche-core/lib/handleErrors');
+const customNotifier = require('dameblanche-core/lib/customNotifier');
+const isProductionBuild = require('dameblanche-core/lib/isProductionBuild');
 const fileExists = require('file-exists');
 const rename = require('gulp-rename');
 const flatten = require('lodash/flatten');
-const getFolders = require('dameblanche/lib/getFolders');
+const getFolders = require('dameblanche-core/lib/getFolders');
 const PluginError = require('plugin-error');
 const replaceExtension = require('replace-ext');
 const through = require('through2');
-const taskEnabled = require('dameblanche/lib/taskEnabled');
+const taskEnabled = require('dameblanche-core/lib/taskEnabled');
 
 const getLanguages = (folder) => {
     let location = './' + folder;

@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const revReplace = require('gulp-rev-replace');
 const path = require('path');
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 let revConfig = config.getTaskConfig('rev');
 let templatesConfig = config.getTaskConfig(revConfig.htmlTask);
 

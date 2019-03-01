@@ -1,11 +1,11 @@
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 const taskConfig = config.getTaskConfig('webpack');
 if (!taskConfig) throw new Error('config is required for webpack task');
 
 const path = require('path');
 const webpack = require('webpack');
 const WebpackManifest = require('./webpackManifest');
-const pathToUrl = require('dameblanche/lib/pathToUrl');
+const pathToUrl = require('dameblanche-core/lib/pathToUrl');
 
 module.exports = (env) => {
     const jsSrc = path.resolve(config.root.src, taskConfig.src);

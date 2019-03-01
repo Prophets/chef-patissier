@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const path = require('path');
 const revReplace = require('gulp-rev-replace');
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 
 // 2) Update asset references with reved filenames in compiled css + js
 const revUpdateReferencesTask = (cb) => {

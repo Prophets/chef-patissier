@@ -1,4 +1,4 @@
-const chef = require('dameblanche');
+const chef = require('dameblanche-core');
 
 const config = {
     'root': {

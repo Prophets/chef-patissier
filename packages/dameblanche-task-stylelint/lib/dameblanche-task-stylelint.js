@@ -1,11 +1,11 @@
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 const taskConfig = config.getTaskConfig('stylelint');
 if (!taskConfig) throw new Error('config is required for stylelint task');
 
 const gulp = require('gulp');
 const stylelint = require('gulp-stylelint');
 const path = require('path');
-const isProductionBuild = require('dameblanche/lib/isProductionBuild');
+const isProductionBuild = require('dameblanche-core/lib/isProductionBuild');
 
 const stylelintTask = () => {
     const paths = {

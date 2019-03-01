@@ -1,4 +1,4 @@
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 const taskConfig = config.getTaskConfig('webpack');
 if (!taskConfig) throw new Error('config is required for webpack task');
 

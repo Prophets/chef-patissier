@@ -1,18 +1,18 @@
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 const taskConfig = config.getTaskConfig('css');
 if (!taskConfig) throw new Error('config is required for css task');
 
 const gulp = require('gulp');
 const gulpif = require('gulp-if');
-const taskRequire = require('dameblanche/lib/taskRequire');
+const taskRequire = require('dameblanche-core/lib/taskRequire');
 const browserSync = taskRequire('browsersync').browserSync;
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const path = require('path');
-const handleErrors = require('dameblanche/lib/handleErrors');
-const customNotifier = require('dameblanche/lib/customNotifier');
-const isProductionBuild = require('dameblanche/lib/isProductionBuild');
+const handleErrors = require('dameblanche-core/lib/handleErrors');
+const customNotifier = require('dameblanche-core/lib/customNotifier');
+const isProductionBuild = require('dameblanche-core/lib/isProductionBuild');
 
 const cssTask = (cb) => {
     const paths = {

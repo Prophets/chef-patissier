@@ -1,6 +1,6 @@
 const gulp = require('gulp');
-const getEnabledTasks = require('dameblanche/lib/getEnabledTasks');
-const isProductionBuild = require('dameblanche/lib/isProductionBuild');
+const getEnabledTasks = require('dameblanche-core/lib/getEnabledTasks');
+const isProductionBuild = require('dameblanche-core/lib/isProductionBuild');
 const watch = require('dameblanche-task-watch');
 
 const defaultTasks = [

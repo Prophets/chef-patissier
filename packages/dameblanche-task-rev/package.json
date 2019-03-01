@@ -24,7 +24,7 @@
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
   "devDependencies": {
-    "dameblanche": "^0.0.0",
+    "dameblanche-core": "^0.0.0",
     "gulp": "^4.0.0",
     "gulp-rev": "^9.0.0",
     "gulp-rev-napkin": "^0.1.0",

@@ -1,9 +1,9 @@
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 
 const gulp = require('gulp');
 const path = require('path');
-const getEnabledTasks = require('dameblanche/lib/getEnabledTasks');
-const taskRequire = require('dameblanche/lib/taskRequire');
+const getEnabledTasks = require('dameblanche-core/lib/getEnabledTasks');
+const taskRequire = require('dameblanche-core/lib/taskRequire');
 const browserSync = taskRequire('browsersync');
 
 const watchFiles = () => {

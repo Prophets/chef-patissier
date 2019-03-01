@@ -1,4 +1,4 @@
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 
 const taskConfig = config.getTaskConfig('mails-overview');
 if (!taskConfig) throw new Error('config is required for mails-overview task');
@@ -8,9 +8,9 @@ const render = require('gulp-nunjucks-render');
 const data = require('gulp-data');
 const fs = require('fs');
 const path = require('path');
-const handleErrors = require('dameblanche/lib/handleErrors');
-const customNotifier = require('dameblanche/lib/customNotifier');
-const getFolders = require('dameblanche/lib/getFolders');
+const handleErrors = require('dameblanche-core/lib/handleErrors');
+const customNotifier = require('dameblanche-core/lib/customNotifier');
+const getFolders = require('dameblanche-core/lib/getFolders');
 
 const getData = () => {
     const dirs = getFolders(config.root.dest);

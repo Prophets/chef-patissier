@@ -1,5 +1,5 @@
 const del = require('del');
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 const taskConfig = config.getTaskConfig('clean');
 
 const cleanTask = () => {

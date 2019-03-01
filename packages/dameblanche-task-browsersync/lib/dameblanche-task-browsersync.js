@@ -1,7 +1,7 @@
 const browserSync = require('browser-sync');
-const config = require('dameblanche/lib/configLoader');
-const taskEnabled = require('dameblanche/lib/taskEnabled');
-const pathToUrl = require('dameblanche/lib/pathToUrl');
+const config = require('dameblanche-core/lib/configLoader');
+const taskEnabled = require('dameblanche-core/lib/taskEnabled');
+const pathToUrl = require('dameblanche-core/lib/pathToUrl');
 const browserSyncConfig = config.getConfig('browsersync');
 
 const webpackTaskEnabled = taskEnabled('webpack');

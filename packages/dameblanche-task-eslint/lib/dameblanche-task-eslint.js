@@ -1,4 +1,4 @@
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 const taskConfig = config.getTaskConfig('eslint');
 if (!taskConfig) throw new Error('config is required for eslint task');
 
@@ -6,7 +6,7 @@ const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 const gulpif = require('gulp-if');
 const path = require('path');
-const isProductionBuild = require('dameblanche/lib/isProductionBuild');
+const isProductionBuild = require('dameblanche-core/lib/isProductionBuild');
 
 const eslintTask = () => {
     const paths = {

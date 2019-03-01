@@ -1,4 +1,4 @@
-const config = require('dameblanche/lib/configLoader');
+const config = require('dameblanche-core/lib/configLoader');
 const taskConfig = config.getTaskConfig('images');
 if (!taskConfig) throw new Error('config is required for images task');
 
@@ -7,7 +7,7 @@ const changed = require('gulp-changed');
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const path = require('path');
-const customNotifier = require('dameblanche/lib/customNotifier');
+const customNotifier = require('dameblanche-core/lib/customNotifier');
 
 const imagesTask = () => {
     const paths = {
