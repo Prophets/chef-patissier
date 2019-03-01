@@ -13,7 +13,6 @@ if (!taskConfig) throw new Error('config is required for mails task');
 const browserSync = require('browser-sync');
 const data = require('gulp-data');
 const gulp = require('gulp');
-const merge = require('merge-stream');
 const path = require('path');
 const fs = require('fs');
 const yaml = require('js-yaml');
@@ -43,9 +42,10 @@ const getLanguages = (folder) => {
 }
 
 const getData = (folder, lang) => {
-    let allData = {};
-
-    allData['folder'] = folder;
+    let allData = {
+        imagesDestination: `${getImagesRoot()}/${folder}/images`,
+        folder
+    };
 
     const filePaths = [
         { type: 'core', file: path.resolve(config.root.src, './core/data', lang + '.yaml') },
@@ -53,7 +53,7 @@ const getData = (folder, lang) => {
     ];
 
     filePaths.forEach((filePath) => {
-        allData[filePath.type] = yaml.safeLoad(fs.readFileSync(filePath.file),'utf8');
+        allData[filePath.type] = yaml.safeLoad(fs.readFileSync(filePath.file), 'utf8');
     });
 
     return allData;
@@ -96,38 +96,28 @@ const getImagesRoot = () => {
     return '';
 }
 
-const emailsTask = () => {
-    const exclude = path.normalize('!**/{' + taskConfig.excludeFolders.join(',') + '}/**');
+const exclude = path.normalize('!**/{' + taskConfig.excludeFolders.join(',') + '}/**');
 
-    const tasks = getFolders(config.root.src).map((folder) => {
+const mailTask = (lang, folder) => {
+    const paths = {
+        src: [path.join(config.root.src, folder, taskConfig.childSrc,  '/**/*.{' + taskConfig.extensions + '}'), exclude],
+        dest: path.join(config.root.dest, taskConfig.dest, folder, '/')
+    };
 
-        const imagesDestination = `${getImagesRoot()}/${folder}/images`;
+    return gulp.src(paths.src)
+        .pipe(data({...getData(folder, lang)}))
+        .on('error', handleErrors)
+        .pipe(reactMjmlRender())
+        .on('error', handleErrors)
+        .pipe(rename({suffix: '-' + lang}))
+        .on('error', handleErrors)
+        .pipe(gulp.dest(paths.dest))
+        .on('end', browserSync.reload)
+        .pipe(customNotifier({ title: 'E-mail template(s) compiled' }));
+}
 
-        const subtasks = getLanguages(folder).map((lang) => {
-            const paths = {
-                src: [path.join(config.root.src, folder, taskConfig.childSrc,  '/**/*.{' + taskConfig.extensions + '}'), exclude],
-                dest: path.join(config.root.dest, taskConfig.dest, folder, '/')
-            };
+const mailsTasks = flatten(getFolders(config.root.src).map((folder) => {
+    return getLanguages(folder).map((lang) => mailTask.bind(this, lang, folder));
+}));
 
-            return gulp.src(paths.src)
-                .pipe(data({...getData(folder, lang), imagesDestination}))
-                .on('error', handleErrors)
-                .pipe(reactMjmlRender())
-                .on('error', handleErrors)
-                .pipe(rename({suffix: '-' + lang}))
-                .on('error', handleErrors)
-                .pipe(gulp.dest(paths.dest))
-                .on('end', browserSync.reload)
-                .pipe(customNotifier({ title: 'E-mail template(s) compiled' }));
-        });
-
-        return subtasks;
-    });
-
-    return merge(flatten(tasks));
-};
-
-
-gulp.task('emails', emailsTask);
-
-module.exports = emailsTask;
+module.exports = gulp.parallel(mailsTasks);
