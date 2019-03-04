@@ -29,7 +29,9 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
     "babel-plugin-auto-import": "^1.0.3",
+    "css": "^2.2.4",
     "dameblanche-core": "^0.0.0",
+    "eslint-plugin-react": "^7.12.4",
     "file-exists": "^5.0.1",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
@@ -46,7 +48,6 @@
     "react-dom": "^16.8.2",
     "through2": "^3.0.0",
     "vinyl": "^2.2.0",
-    "webpack-stream": "^5.2.1",
-    "css": "^2.2.4"
+    "webpack-stream": "^5.2.1"
   }
 }

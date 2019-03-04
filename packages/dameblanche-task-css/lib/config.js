@@ -4,8 +4,8 @@ module.exports = {
     'sass': {
         'includePaths': [
             './node_modules',
-            './../../node_modules'
-        ]
+            './../../node_modules',
+        ],
     },
-    'extensions': ['scss', 'css']
+    'extensions': ['scss', 'css'],
 };

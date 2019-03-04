@@ -3,6 +3,6 @@ module.exports = {
     'dest': 'js',
     'extensions': ['js', 'json'],
     'entries': {
-        'app': ['./app.js']
-    }
+        'app': ['./app.js'],
+    },
 };

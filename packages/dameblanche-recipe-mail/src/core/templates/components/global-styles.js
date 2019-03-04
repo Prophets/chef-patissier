@@ -5,8 +5,8 @@ const styles = {
         justifyContent: 'left',
         responsive: true,
         maxWidth: 600,
-        verticalAlign: 'top'
-    }
+        verticalAlign: 'top',
+    },
 };
 
 export default styles;

@@ -3,17 +3,17 @@ const args = require('args');
 
 args
     .option('recipe', 'dameblanche recipe name', 'web')
-    .option('dir', 'directory')
+    .option('dir', 'directory');
 
 const flags = args.parse(process.argv);
-const dir = flags.dir || args.sub[0] || '.' ;
+const dir = flags.dir || args.sub[0] || '.';
 
 const exec = async() => {
     try {
         // find npm package url
         const packageUrl = (await shellExec(`npm view dameblanche-recipe-${flags.recipe} dist.tarball`)).stdout.trim();
         // make dir
-        if(dir !== '.') {
+        if (dir !== '.') {
             await shellExec(`mkdir -p ${dir}`);
         }
         // download package
@@ -25,5 +25,5 @@ const exec = async() => {
     } catch (e) {
         console.error(e);
     }
-}
+};
 exec();

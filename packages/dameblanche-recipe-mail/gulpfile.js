@@ -3,7 +3,7 @@ const chef = require('dameblanche-core');
 const config = {
     'root': {
         'src': './src',
-        'dest': './public'
+        'dest': './public',
     },
     'browsersync': {
     },
@@ -13,17 +13,17 @@ const config = {
         ['eslint', 'stylelint'],
         [['images', {
             src: '*/images',
-            dest: ''
+            dest: '',
         }]],
         [['css', {
             src: '*/sass',
-            dest: ''
+            dest: '',
         }]],
         ['mails'],
         [[ 'mails-overview', { disableWatch: true } ]],
         [['rev', { ifProduction: true, htmlTask: 'mails' }]],
-        [['cdn', { ifProduction: true }]]
-    ]
+        [['cdn', { ifProduction: true }]],
+    ],
 };
 
 module.exports = chef(config);

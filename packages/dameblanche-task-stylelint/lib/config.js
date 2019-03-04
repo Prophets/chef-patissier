@@ -1,4 +1,4 @@
 module.exports = {
     'src': 'sass',
-    'extensions': ['scss', 'css']
+    'extensions': ['scss', 'css'],
 };

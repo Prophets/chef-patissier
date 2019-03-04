@@ -11,7 +11,7 @@ const browserSyncTask = (done) => {
 
     if (typeof(proxyConfig) === 'string') {
         browserSyncConfig.proxy = {
-            target: proxyConfig
+            target: proxyConfig,
         };
 
         delete browserSyncConfig.server;
@@ -27,9 +27,9 @@ const browserSyncTask = (done) => {
         server.middleware = [
             require('webpack-dev-middleware')(compiler, {
                 stats: 'minimal',
-                publicPath: pathToUrl('/', webpackConfig.output.publicPath)
+                publicPath: pathToUrl('/', webpackConfig.output.publicPath),
             }),
-            require('webpack-hot-middleware')(compiler)
+            require('webpack-hot-middleware')(compiler),
         ];
     }
 

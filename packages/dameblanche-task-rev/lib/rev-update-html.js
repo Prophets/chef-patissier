@@ -12,7 +12,7 @@ const revUpdateHTMLTask = () => {
 
     return gulp.src(path.join(config.root.dest, htmlDest, '/**/*.html'))
         .pipe(revReplace({
-            manifest: manifest
+            manifest: manifest,
         }))
         .pipe(gulp.dest(path.join(config.root.dest, htmlDest)));
 };

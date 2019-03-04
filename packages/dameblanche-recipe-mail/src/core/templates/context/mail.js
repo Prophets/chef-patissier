@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 
 const MailContext = createContext({
-    data: {}
+    data: {},
 });
 
 export default MailContext;

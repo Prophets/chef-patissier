@@ -1,12 +1,12 @@
-import React from 'react';
 import DefaultLayout from '../../core/templates/layouts/default.js';
 
 const overrideHead = (DefaultHead) => {
-    return (props) => (
+    const Head = (props) => (
         <>
             <DefaultHead {...props}/>
         </>
     );
+    return Head;
 };
 
 const Index = (props) => (

@@ -5,7 +5,7 @@ const watch = require('dameblanche-task-watch');
 
 const defaultTasks = [
     getEnabledTasks().enabledTasksAsOperations,
-    isProductionBuild() ? undefined : watch
+    isProductionBuild() ? undefined : watch,
 ].filter(Boolean);
 
 module.exports = gulp.series(...defaultTasks);

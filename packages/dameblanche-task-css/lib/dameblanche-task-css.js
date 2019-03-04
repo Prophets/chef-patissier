@@ -14,10 +14,10 @@ const handleErrors = require('dameblanche-core/lib/handleErrors');
 const customNotifier = require('dameblanche-core/lib/customNotifier');
 const isProductionBuild = require('dameblanche-core/lib/isProductionBuild');
 
-const cssTask = (cb) => {
+const cssTask = () => {
     const paths = {
         src: path.join(config.root.src, taskConfig.src, '/**/*.{' + taskConfig.extensions + '}'),
-        dest: path.join(config.root.dest, taskConfig.dest)
+        dest: path.join(config.root.dest, taskConfig.dest),
     };
 
     return gulp.src(paths.src, { sourcemaps: !isProductionBuild() })
@@ -25,7 +25,7 @@ const cssTask = (cb) => {
         .on('error', handleErrors)
         .pipe(autoprefixer())
         .pipe(gulpif(isProductionBuild(), cssnano({
-            autoprefixer: false
+            autoprefixer: false,
         })))
         .pipe(gulp.dest(paths.dest, { sourcemaps: !isProductionBuild() }))
         .pipe(customNotifier({ title: 'CSS compiled' }))

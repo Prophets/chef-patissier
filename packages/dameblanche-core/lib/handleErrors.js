@@ -6,7 +6,7 @@ module.exports = function({ plugin, message, file, fileName } = {}) {
     notify.onError({
         title: `${plugin} failed`,
         message: 'ERROR',
-        icon: `${__dirname}/../extra/xallthey.png`
+        icon: `${__dirname}/../extra/xallthey.png`,
     }).apply(this, arguments);
 
     const chalk = colors.red;

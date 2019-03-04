@@ -4,7 +4,7 @@ import {
 } from 'mjml-react';
 import MailContext from '../context/mail';
 
-const Image = ({ src, srcset, cssClass, fullWidth, ...otherProps }) => {
+const Image = ({ src, srcset, ...otherProps }) => {
     return <MailContext.Consumer>
         {
             ({ data }) => (
@@ -21,6 +21,8 @@ const Image = ({ src, srcset, cssClass, fullWidth, ...otherProps }) => {
         }
     </MailContext.Consumer>;
 };
-Image.style = (props) => <MjmlClass name="image" {...props} />;
+
+const ImageStyle = (props) => <MjmlClass name="image" {...props} />;
+Image.style = ImageStyle;
 
 export default Image;

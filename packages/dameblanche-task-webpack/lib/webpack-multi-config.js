@@ -20,23 +20,23 @@ module.exports = (env) => {
         resolve: {
             modules: [
                 jsSrc,
-                'node_modules'
+                'node_modules',
             ],
-            extensions: taskConfig.extensions.map((extension) => '.' + extension)
+            extensions: taskConfig.extensions.map((extension) => '.' + extension),
         },
         module: {
             rules: [{
                 test: /\.js$/,
                 loader: 'babel-loader',
-                exclude: /node_modules/
-            }]
+                exclude: /node_modules/,
+            }],
         },
         mode: 'development',
         output: {
             path: path.normalize(jsDest),
             filename: filenamePattern,
-            publicPath: publicPath
-        }
+            publicPath: publicPath,
+        },
     };
 
     if (env === 'development') {

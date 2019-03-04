@@ -4,16 +4,16 @@ module.exports = {
     'childSrc': 'templates',
     'dest': './',
     'htmlmin': {
-        'collapseWhitespace': true
+        'collapseWhitespace': true,
     },
     'extensions': ['js', 'yml', 'yaml'],
     'excludeFolders': ['core', 'layouts', 'partials', 'shared', 'macros', 'data', 'components'],
     'inlinesource': {
         'attribute': 'cssinline',
-        'compress': false
+        'compress': false,
     },
     'mjml': {
         'minify': false,
-        'validationLevel': 'strict' // can be skip, soft, strict
-    }
+        'validationLevel': 'strict', // can be skip, soft, strict
+    },
 };

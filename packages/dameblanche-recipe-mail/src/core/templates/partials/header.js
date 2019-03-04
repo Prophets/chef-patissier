@@ -4,7 +4,6 @@ import {
 } from 'mjml-react';
 import Image from '../components/image';
 
-const imagePath = '';
 const Header = ({ img }) => (
     <MjmlSection mjClass="padding-y-0">
         <MjmlColumn>

@@ -12,16 +12,16 @@ const customNotifier = require('dameblanche-core/lib/customNotifier');
 const svgSpriteTask = () => {
     const paths = {
         src: path.join(config.root.src, taskConfig.src, '/*.svg'),
-        dest: path.join(config.root.dest, taskConfig.dest)
+        dest: path.join(config.root.dest, taskConfig.dest),
     };
 
     return gulp.src(paths.src)
         .pipe(imagemin([
             imagemin.svgo({
                 plugins: [{
-                    removeViewBox: false
-                }]
-            })
+                    removeViewBox: false,
+                }],
+            }),
         ]))
         .pipe(svgstore())
         .pipe(gulp.dest(paths.dest))

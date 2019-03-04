@@ -20,7 +20,7 @@ const templatesTask = () => {
 
     const paths = {
         src: [path.join(config.root.src, taskConfig.src, '/**/*.{' + taskConfig.extensions + '}'), exclude],
-        dest: path.join(config.root.dest, taskConfig.dest)
+        dest: path.join(config.root.dest, taskConfig.dest),
     };
 
     const getData = () => {
@@ -34,11 +34,11 @@ const templatesTask = () => {
         .pipe(render({
             path: [path.join(config.root.src, taskConfig.src)],
             envOptions: {
-                watch: false
+                watch: false,
             },
             manageEnv(env) {
                 env.addGlobal('imagePath', config.tasks.images ? config.tasks.images.dest : 'images');
-            }
+            },
         }))
         .on('error', handleErrors)
         .pipe(gulpif(isProductionBuild(), htmlmin(taskConfig.htmlmin)))

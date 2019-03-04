@@ -21,5 +21,6 @@ const allTypo = { H1, H2, H3, H4, P };
 
 keys(allTypo).forEach((name) => {
     const Item = allTypo[name];
-    Item.style = (props) => <MjmlClass name={name.toLowerCase()} {...props}/>;
+    const TypoStyle = (props) => <MjmlClass name={name.toLowerCase()} {...props}/>;
+    Item.style = TypoStyle;
 });

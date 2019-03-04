@@ -9,7 +9,7 @@ const isProductionBuild = require('dameblanche-core/lib/isProductionBuild');
 
 const stylelintTask = () => {
     const paths = {
-        src: path.join(config.root.src, taskConfig.src, '/**/*.{' + taskConfig.extensions + '}')
+        src: path.join(config.root.src, taskConfig.src, '/**/*.{' + taskConfig.extensions + '}'),
     };
 
     return gulp.src([paths.src])
@@ -17,8 +17,8 @@ const stylelintTask = () => {
             failAfterError: isProductionBuild() ? true : false,
             reporters: [{
                 formatter: 'string',
-                console: true
-            }]
+                console: true,
+            }],
         }));
 };
 

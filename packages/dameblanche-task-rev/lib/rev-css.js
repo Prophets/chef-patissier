@@ -11,10 +11,10 @@ const revCSSTask = () => {
         .pipe(rev())
         .pipe(gulp.dest(config.root.dest))
         .pipe(revNapkin({
-            verbose: false
+            verbose: false,
         }))
         .pipe(rev.manifest(path.join(config.root.dest, 'rev-manifest.json'), {
-            merge: true
+            merge: true,
         }))
         .pipe(gulp.dest('.'));
 };

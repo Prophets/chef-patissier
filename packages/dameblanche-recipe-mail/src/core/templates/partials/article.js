@@ -1,6 +1,3 @@
-import {
-    MjmlText,
-} from 'mjml-react';
 import Image from '../components/image';
 import { H3, P } from '../components/typo';
 

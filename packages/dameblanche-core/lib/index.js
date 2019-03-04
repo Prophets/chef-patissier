@@ -14,7 +14,7 @@ const bootstrap = (config) => {
 
     getFlatTasks().forEach((task) => {
         const name = task[0];
-        gulpTasks[name] = taskRequire(name)
+        gulpTasks[name] = taskRequire(name);
     });
 
     gulpTasks.default = taskRequire('default');

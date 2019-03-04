@@ -1,4 +1,3 @@
-import React from 'react';
 import { MjmlButton } from 'mjml-react';
 
 const Button = ({ children, ...otherProps }) => {

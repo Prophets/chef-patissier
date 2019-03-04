@@ -1,5 +1,5 @@
 module.exports = {
     'src': './',
     'dest': './',
-    'mainFile': 'index.njk'
-}
+    'mainFile': 'index.njk',
+};

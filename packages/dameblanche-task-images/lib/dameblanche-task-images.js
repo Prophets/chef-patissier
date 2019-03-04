@@ -12,7 +12,7 @@ const customNotifier = require('dameblanche-core/lib/customNotifier');
 const imagesTask = () => {
     const paths = {
         src: path.join(config.root.src, taskConfig.src, '/**/*.{' + taskConfig.extensions + '}'),
-        dest: path.join(config.root.dest, taskConfig.dest)
+        dest: path.join(config.root.dest, taskConfig.dest),
     };
 
     return gulp.src([paths.src, '*!README.md'])

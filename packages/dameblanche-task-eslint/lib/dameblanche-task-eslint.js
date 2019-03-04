@@ -10,7 +10,7 @@ const isProductionBuild = require('dameblanche-core/lib/isProductionBuild');
 
 const eslintTask = () => {
     const paths = {
-        src: path.join(config.root.src, taskConfig.src, '/**/*.{' + taskConfig.extensions + '}')
+        src: path.join(config.root.src, taskConfig.src, '/**/*.{' + taskConfig.extensions + '}'),
     };
 
     return gulp.src([paths.src])

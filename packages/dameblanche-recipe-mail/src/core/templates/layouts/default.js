@@ -2,12 +2,10 @@ import {
     Mjml,
     MjmlHead,
     MjmlTitle,
-    MjmlWrapper,
     MjmlBody,
     MjmlSection,
     MjmlColumn,
     MjmlImage,
-    MjmlText,
     MjmlFont
 } from 'mjml-react';
 import SupHeader from '../partials/supheader';
@@ -17,9 +15,9 @@ import MjssStyle from '../components/mjss-style';
 import MailContext from '../context/mail';
 import Grid from '../components/grid';
 import Article from '../partials/article';
-import { H1, H2, H4, P } from '../components/typo';
+import { H1, H2, P } from '../components/typo';
 
-const DefaultHead = ({ content, attributes, core, folder }) => (
+const DefaultHead = ({ content, core, folder }) => (
     <>
         <MjmlTitle>{ content.title }</MjmlTitle>
 

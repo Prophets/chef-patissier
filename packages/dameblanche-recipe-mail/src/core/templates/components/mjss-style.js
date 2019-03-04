@@ -1,19 +1,18 @@
 import * as Mjml from 'mjml-react';
 import css from 'css';
-import map from 'lodash/map';
 import fs from 'fs';
 import camelCase from 'lodash/camelCase';
 import upperFirst from 'lodash/upperFirst';
 import * as components from './';
 
 const MjssStyle = ({ children, folder, src }) => {
-    let style = children;
+    let styles = children;
     try {
-        style = String(fs.readFileSync(`${__dirname}/../../../../public/${ folder }/sass/${ src }`));
+        styles = String(fs.readFileSync(`${__dirname}/../../../../public/${ folder }/sass/${ src }`));
     } catch (e) {}
     return <Mjml.MjmlAttributes>
         {
-            css.parse(style).stylesheet.rules.map( (style) => {
+            css.parse(styles).stylesheet.rules.map( (style) => {
                 if (style.selectors === undefined && style.media) {
                     throw new Error(`MjssValidationError: @media ${style.media} - media queries are not allowed in <MjssStyle>`);
                 }
@@ -30,7 +29,7 @@ const MjssStyle = ({ children, folder, src }) => {
                         const selectorFirstChar = selector[0];
                         const types = {
                             '.': Mjml.MjmlClass,
-                            '*': Mjml.MjmlAll
+                            '*': Mjml.MjmlAll,
                         };
 
                         let Type = types[selectorFirstChar];
@@ -54,8 +53,8 @@ const MjssStyle = ({ children, folder, src }) => {
                             props.name = selector.slice(1);
                         }
 
-                        style.declarations.forEach((style) => {
-                            props[camelCase(style.property)] = style.value;
+                        style.declarations.forEach((styleRule) => {
+                            props[camelCase(styleRule.property)] = styleRule.value;
                         });
 
                         if (isMjmlComponent) {

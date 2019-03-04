@@ -11,9 +11,9 @@ const staticTask = () => {
     const paths = {
         src: [
             path.join(config.root.src, taskConfig.src, '/**/*'),
-            path.join('!' + config.root.src, taskConfig.src, '/README.md')
+            path.join('!' + config.root.src, taskConfig.src, '/README.md'),
         ],
-        dest: path.join(config.root.dest, taskConfig.dest)
+        dest: path.join(config.root.dest, taskConfig.dest),
     };
 
     return gulp.src(paths.src)

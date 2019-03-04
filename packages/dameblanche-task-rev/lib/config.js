@@ -1,3 +1,3 @@
 module.exports = {
-    htmlTask: 'templates'
+    htmlTask: 'templates',
 };

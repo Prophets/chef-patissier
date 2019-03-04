@@ -8,6 +8,6 @@ module.exports = {
         'user': process.env.CDN_USER,
         'password': process.env.CDN_PASSWORD,
         'port': 21,
-        'destination': process.env.CDN_DESTINATION
-    }
-}
+        'destination': process.env.CDN_DESTINATION,
+    },
+};

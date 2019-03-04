@@ -4,7 +4,8 @@
   "description": "Chef patissier meticulously runs his tasks and creates delicious frontend deserts.",
   "main": "index.js",
   "scripts": {
-    "test": "jest tests"
+    "test": "jest tests",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,8 @@
   },
   "homepage": "https://github.com/Prophets/dameblanche#readme",
   "devDependencies": {
+    "eslint": "^5.15.0",
+    "eslint-config-prophets": "^1.0.0",
     "jest": "^24.1.0",
     "lerna": "^3.13.0"
   },

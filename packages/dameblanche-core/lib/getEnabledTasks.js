@@ -5,13 +5,12 @@ const isProductionBuild = require('./isProductionBuild');
 const taskRequire = require('./taskRequire');
 
 module.exports = () => {
-
     // Grouped by what can run in parallel
     const allTasks = config.tasks.map(parallelTasks => {
         return parallelTasks.map(task => {
             if (Array.isArray(task)) {
-                const [ name, config = {} ] = task;
-                const defaultConfig = { ifProduction: false, ...config }
+                const [ name, taskConfig = {} ] = task;
+                const defaultConfig = { ifProduction: false, ...taskConfig };
                 if (defaultConfig.ifProduction) {
                     return isProductionBuild() ? name : false;
                 }
@@ -32,6 +31,6 @@ module.exports = () => {
 
     return {
         enabledTasksAsStrings,
-        enabledTasksAsOperations
+        enabledTasksAsOperations,
     };
 };

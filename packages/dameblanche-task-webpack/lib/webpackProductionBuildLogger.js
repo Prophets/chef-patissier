@@ -16,7 +16,7 @@ module.exports = (err, stats) => {
             '\n',
             stats.toString({
                 chunks: false,
-                colors: true
+                colors: true,
             }),
             '\n'
         );

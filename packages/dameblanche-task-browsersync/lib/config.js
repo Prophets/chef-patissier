@@ -1,5 +1,5 @@
 module.exports = {
     'server': {
-        'baseDir': 'public'
-    }
+        'baseDir': 'public',
+    },
 };
