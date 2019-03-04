@@ -10,7 +10,7 @@ const config = {
     // Grouped by what can run in parallel
     'tasks': [
         ['clean'],
-        ['eslint', 'stylelint'],
+        ['eslint', ['stylelint', { src: '*/sass' }]],
         [['images', {
             src: '*/images',
             dest: '',

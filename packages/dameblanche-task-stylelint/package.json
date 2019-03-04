@@ -28,6 +28,7 @@
     "gulp": "^4.0.0",
     "gulp-stylelint": "^8.0.0",
     "stylelint": "^9.10.1",
+    "stylelint-config-prophets": "^1.0.0",
     "stylelint-scss": "^3.5.3"
   }
 }

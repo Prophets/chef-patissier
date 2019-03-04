@@ -1,0 +1,8 @@
+{
+    "extends": ["stylelint-config-prophets"],
+    "rules": {
+        "selector-type-no-unknown": [true, {
+            "ignoreTypes": ["/^mjml/"]
+        }]
+    }
+}

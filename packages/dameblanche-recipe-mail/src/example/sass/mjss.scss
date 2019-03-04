@@ -19,6 +19,7 @@
     padding-bottom: 0;
 }
 
+/* stylelint-disable-next-line selector-type-no-unknown */
 grid {
     gutter: $padding;
     columns: 3;
