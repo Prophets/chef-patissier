@@ -23,10 +23,14 @@
   "bugs": {
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
-  "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "dameblanche-core": "^0.0.0",
-    "dameblanche-task-webpack": "^0.0.0",
-    "webpack": "^4.29.5"
+  "dependencies": {
+    "webpack-dev-middleware": "^3.5.2",
+    "webpack-hot-middleware": "^2.21.2"
+  },
+  "peerDependencies": {
+    "browser-sync": ">=2",
+    "dameblanche-core": ">=0",
+    "dameblanche-task-webpack": ">=0",
+    "webpack": ">=4"
   }
 }

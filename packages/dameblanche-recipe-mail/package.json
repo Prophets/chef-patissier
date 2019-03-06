@@ -25,8 +25,10 @@
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "dameblanche-core": "^0.0.0",
     "dameblanche-task-browsersync": "^0.0.0",
+    "dameblanche-task-cdn": "^0.0.0",
     "dameblanche-task-clean": "^0.0.0",
     "dameblanche-task-css": "^0.0.0",
     "dameblanche-task-default": "^0.0.0",
@@ -38,9 +40,9 @@
     "dameblanche-task-sizereport": "^0.0.0",
     "dameblanche-task-stylelint": "^0.0.0",
     "dameblanche-task-watch": "^0.0.0",
-    "eslint-plugin-react": "^7.12.4"
-  },
-  "dependencies": {
-    "dameblanche-task-cdn": "^0.0.0"
+    "eslint-config-prophets": "^1.0.0",
+    "eslint-plugin-react": "^7.12.4",
+    "gulp": "^4.0.0",
+    "stylelint-config-prophets": "^1.0.0"
   }
 }

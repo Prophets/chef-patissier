@@ -23,11 +23,14 @@
   "bugs": {
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
-  "devDependencies": {
-    "gulp": "^4.0.0",
+  "dependencies": {
+    "ansi-colors": "^3.2.4",
     "gulp-notify": "^3.2.0",
     "lodash": "^4.17.11",
     "minimist": "^1.2.0",
     "dotenv": "^6.2.0"
+  },
+  "peerDependencies": {
+    "gulp": ">=4"
   }
 }

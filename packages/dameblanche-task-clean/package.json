@@ -23,8 +23,10 @@
   "bugs": {
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
-  "devDependencies": {
-    "dameblanche-core": "^0.0.0",
+  "dependencies": {
     "del": "^3.0.0"
+  },
+  "peerDependencies": {
+    "dameblanche-core": ">=0"
   }
 }

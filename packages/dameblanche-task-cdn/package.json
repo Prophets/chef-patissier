@@ -23,12 +23,12 @@
   "bugs": {
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
-  "devDependencies": {
-    "dameblanche-core": "^0.0.0"
-  },
   "dependencies": {
     "dotenv": "^6.1.0",
-    "gulp": "^4.0.0",
     "vinyl-ftp": "^0.6.1"
+  },
+  "peerDependencies": {
+    "dameblanche-core": ">=0",
+    "gulp": ">=4"
   }
 }

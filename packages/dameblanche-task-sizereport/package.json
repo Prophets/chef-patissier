@@ -23,9 +23,11 @@
   "bugs": {
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
-  "devDependencies": {
-    "dameblanche-core": "^0.0.0",
-    "gulp": "^4.0.0",
+  "dependencies": {
     "gulp-sizereport": "^1.2.1"
+  },
+  "peerDependencies": {
+    "dameblanche-core": ">=0",
+    "gulp": ">=4"
   }
 }

@@ -26,10 +26,8 @@
   "bugs": {
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
-  "devDependencies": {
-    "shell-exec": "^1.0.2"
-  },
   "dependencies": {
-    "args": "^5.0.0"
+    "args": "^5.0.0",
+    "shell-exec": "^1.0.2"
   }
 }

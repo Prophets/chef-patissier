@@ -23,9 +23,9 @@
   "bugs": {
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
-  "devDependencies": {
-    "dameblanche-core": "^0.0.0",
-    "dameblanche-task-browsersync": "^0.0.0",
-    "gulp": "^4.0.0"
+  "peerDependencies": {
+    "gulp": ">=4",
+    "dameblanche-core": ">=0",
+    "dameblanche-task-browsersync": ">=0"
   }
 }
