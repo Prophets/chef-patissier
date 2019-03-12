@@ -33,5 +33,8 @@
     "browser-sync": ">=2",
     "webpack": ">=4"
   },
-  "gitHead": "0bd3081fd132c1b6ba1ffa90262d16c469469940"
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "5ffeff893ce5e3700cfacc7ed336abb24213544e"
 }
