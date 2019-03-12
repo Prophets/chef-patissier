@@ -42,5 +42,6 @@
   "dependencies": {
     "normalize.css": "^8.0.1",
     "svgxuse": "^1.2.6"
-  }
+  },
+  "gitHead": "0bd3081fd132c1b6ba1ffa90262d16c469469940"
 }

@@ -28,5 +28,6 @@
   },
   "peerDependencies": {
     "@dameblanche/core": ">=0"
-  }
+  },
+  "gitHead": "0bd3081fd132c1b6ba1ffa90262d16c469469940"
 }
