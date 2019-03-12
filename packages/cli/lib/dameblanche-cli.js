@@ -11,7 +11,7 @@ const dir = flags.dir || args.sub[0] || '.';
 const exec = async() => {
     try {
         // find npm package url
-        const packageUrl = (await shellExec(`npm view dameblanche-recipe-${flags.recipe} dist.tarball`)).stdout.trim();
+        const packageUrl = (await shellExec(`npm view @dameblanche/recipe-${flags.recipe} dist.tarball`)).stdout.trim();
         // make dir
         if (dir !== '.') {
             await shellExec(`mkdir -p ${dir}`);
