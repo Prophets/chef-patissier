@@ -1,0 +1,39 @@
+{
+  "name": "@dameblanche/task-images",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Samuel Joos <sjoos@prophets.be>",
+  "homepage": "https://github.com/Prophets/dameblanche/tree/master/packages/dameblanche-task-images#readme",
+  "license": "MIT",
+  "main": "lib/dameblanche-task-images.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prophets/dameblanche.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Prophets/dameblanche/issues"
+  },
+  "dependencies": {
+    "gulp-changed": "^3.2.0",
+    "gulp-imagemin": "^5.0.3",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-optipng": "^6.0.0",
+    "imagemin-svgo": "^7.0.0"
+  },
+  "peerDependencies": {
+    "browser-sync": ">=2",
+    "@dameblanche/core": ">=0",
+    "gulp": ">=4"
+  }
+}

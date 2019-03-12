@@ -1,0 +1,46 @@
+{
+  "name": "@dameblanche/recipe-web",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Samuel Joos <sjoos@prophets.be>",
+  "homepage": "https://github.com/Prophets/dameblanche/tree/master/packages/dameblanche-dameblanche#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prophets/dameblanche.git"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp --production"
+  },
+  "bugs": {
+    "url": "https://github.com/Prophets/dameblanche/issues"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.3.1",
+    "browser-sync": "^2.26.3",
+    "@dameblanche/core": "^0.0.0",
+    "@dameblanche/task-browsersync": "^0.0.0",
+    "@dameblanche/task-clean": "^0.0.0",
+    "@dameblanche/task-css": "^0.0.0",
+    "@dameblanche/task-default": "^0.0.0",
+    "@dameblanche/task-eslint": "^0.0.0",
+    "@dameblanche/task-images": "^0.0.0",
+    "@dameblanche/task-rev": "^0.0.0",
+    "@dameblanche/task-sizereport": "^0.0.0",
+    "@dameblanche/task-static": "^0.0.0",
+    "@dameblanche/task-stylelint": "^0.0.0",
+    "@dameblanche/task-svgsprite": "^0.0.0",
+    "@dameblanche/task-templates": "^0.0.0",
+    "@dameblanche/task-watch": "^0.0.0",
+    "@dameblanche/task-webpack": "^0.0.0",
+    "eslint-config-prophets": "^1.0.0",
+    "gulp": "^4.0.0",
+    "stylelint-config-prophets": "^1.0.0",
+    "webpack": "^4.29.6"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "svgxuse": "^1.2.6"
+  }
+}

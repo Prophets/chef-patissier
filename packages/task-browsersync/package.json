@@ -1,0 +1,36 @@
+{
+  "name": "@dameblanche/task-browsersync",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Samuel Joos <sjoos@prophets.be>",
+  "homepage": "https://github.com/Prophets/dameblanche/tree/master/packages/dameblanche-task-browsersync#readme",
+  "license": "MIT",
+  "main": "lib/dameblanche-task-browsersync.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prophets/dameblanche.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Prophets/dameblanche/issues"
+  },
+  "dependencies": {
+    "webpack-dev-middleware": "^3.5.2",
+    "webpack-hot-middleware": "^2.21.2"
+  },
+  "peerDependencies": {
+    "browser-sync": ">=2",
+    "@dameblanche/core": ">=0",
+    "@dameblanche/task-webpack": ">=0",
+    "webpack": ">=4"
+  }
+}

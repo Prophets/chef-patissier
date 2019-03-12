@@ -1,0 +1,34 @@
+{
+  "name": "@dameblanche/task-stylelint",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Samuel Joos <sjoos@prophets.be>",
+  "homepage": "https://github.com/Prophets/dameblanche/tree/master/packages/dameblanche-task-stylelint#readme",
+  "license": "MIT",
+  "main": "lib/dameblanche-task-stylelint.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prophets/dameblanche.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Prophets/dameblanche/issues"
+  },
+  "dependencies": {
+    "gulp-stylelint": "^8.0.0",
+    "stylelint": "^9.10.1"
+  },
+  "peerDependencies": {
+    "@dameblanche/core": ">=0",
+    "gulp": ">=4"
+  }
+}
