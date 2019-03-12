@@ -21,7 +21,7 @@ const exec = async() => {
         // untar package
         await shellExec(`tar -C ${dir} -zxvf ${dir}/package.tgz `);
         // put package files in the correct place
-        await shellExec(`rm -f ${dir}/package.tgz && mv ${dir}/package/* ${dir} && rm -rf ${dir}/package`);
+        await shellExec(`rm -f ${dir}/package.tgz && mv ${dir}/package/{*,.[^.]*} ${dir} && rm -rf ${dir}/package`);
     } catch (e) {
         console.error(e);
     }
