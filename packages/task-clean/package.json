@@ -1,6 +1,6 @@
 {
   "name": "@dameblanche/task-clean",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.3",
   "description": "Clean the build directory",
   "author": "Samuel Joos <sjoos@prophets.be>",
   "homepage": "https://github.com/Prophets/dameblanche/tree/master/packages/dameblanche-task-clean#readme",
