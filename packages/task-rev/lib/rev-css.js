@@ -3,11 +3,12 @@ const path = require('path');
 const rev = require('gulp-rev');
 const revNapkin = require('gulp-rev-napkin');
 const config = require('@dameblanche/core/lib/configLoader');
+const createIgnoredList = require('./create-ignored-list');
 
 // 4) Rev and compress CSS and JS files (this is done after assets, so that if a
 //    referenced asset hash changes, the parent hash will change as well
 const revCSSTask = () => {
-    return gulp.src(path.join(config.root.dest, '/**/*.css'))
+    return gulp.src([path.join(config.root.dest, '/**/*.css'), ...createIgnoredList()])
         .pipe(rev())
         .pipe(gulp.dest(config.root.dest))
         .pipe(revNapkin({
