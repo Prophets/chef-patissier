@@ -1,0 +1,71 @@
+$block-grid-import: true !default;
+
+$block-grid-classname: 'block-grid' !default;
+$block-grid-gutter-width: $grid-gutter-width !default;
+$block-grid-gutter-width-compact: $block-grid-gutter-width/2 !default;
+
+@mixin block-grid-spacing($spacer: $block-grid-gutter-width) {
+    margin: (-$spacer/2);
+    width: calc(100% + #{$spacer});
+
+    > .#{$block-grid-classname}__item {
+        padding: $spacer/2;
+    }
+}
+
+@mixin block-grid($per-row) {
+    > .#{$block-grid-classname}__item {
+        width: (100%/$per-row);
+        max-width: (100%/$per-row); //IE10 & IE11
+        flex: 0 1 (100%/$per-row);
+    }
+}
+
+@mixin block-grids($size) {
+    @for $i from 1 through 13 {
+        .#{$block-grid-classname}--#{$size}-#{$i} { @include block-grid($i); }
+    }
+}
+
+@if ($block-grid-import) {
+    .#{$block-grid-classname} {
+        @include list-unstyled;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include block-grid-spacing;
+
+        &__item {
+            display: block;
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+
+            > * {
+                width: 100%;
+                min-height: 100%;
+            }
+        }
+
+        &--no-gutter {
+            @include block-grid-spacing(0);
+        }
+
+        &--compact {
+            @include block-grid-spacing($block-grid-gutter-width-compact);
+        }
+
+        &--justify-start {
+            justify-content: start;
+        }
+    }
+
+    @each $breakpoint in map-keys($breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            $infix: breakpoint-infix($breakpoint);
+
+            @include block-grids($infix);
+        }
+    }
+}

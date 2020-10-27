@@ -17,7 +17,7 @@ const imagesTask = () => {
 
     return gulp.src([paths.src, '*!README.md'])
         .pipe(changed(paths.dest)) // Ignore unchanged files
-        .pipe(imagemin()) // Optimize
+        .pipe(imagemin(taskConfig.options)) // Optimize
         .pipe(gulp.dest(paths.dest))
         .pipe(customNotifier({ title: 'Images minified' }))
         .pipe(browserSync.stream());

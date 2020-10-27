@@ -1,45 +1,63 @@
-$colors-brand: (
-    primary: (
-        base: #00b9d4,
-        dark: darken(#00b9d4, 10%)
-    )
+/* stylelint-disable scss/no-duplicate-dollar-variables */
+
+$colors-brand: () !default;
+$colors-brand: map-merge(
+    (
+        primary: (
+            base: #00b9d4,
+            dark: darken(#00b9d4, 10%)
+        )
+    ),
+    $colors-brand
 );
 
-$colors-gray: (
-    primary: (
-        light: #eee,
-        base: #999,
-        dark: #333
-    )
+$colors-gray: () !default;
+$colors-gray: map-merge(
+    (
+        primary: (
+            light: #eee,
+            base: #999,
+            dark: #333
+        )
+    ),
+    $colors-gray
 );
 
-$colors-status: (
-    success: (
-        light: #dff0d8,
-        base: #3c763d
+$colors-status: () !default;
+$colors-status: map-merge(
+    (
+        success: (
+            light: #dff0d8,
+            base: #3c763d
+        ),
+        info: (
+            light: #d9edf7,
+            base: #31708f
+        ),
+        warning: (
+            light: #fcf8e3,
+            base: #8a6d3b
+        ),
+        error: (
+            light: #f2dede,
+            base: #a94442
+        )
     ),
-    info: (
-        light: #d9edf7,
-        base: #31708f
-    ),
-    warning: (
-        light: #fcf8e3,
-        base: #8a6d3b
-    ),
-    error: (
-        light: #f2dede,
-        base: #a94442
-    )
+    $colors-status
 );
 
-$colors-social: (
-    twitter: (
-        base: #32b9f0
+$colors-social: () !default;
+$colors-social: map-merge(
+    (
+        twitter: (
+            base: #32b9f0
+        ),
+        facebook: (
+            base: #4267b2
+        ),
+        linkedin: (
+            base: #0077b5
+        )
     ),
-    facebook: (
-        base: #4267b2
-    ),
-    linkedin: (
-        base: #0077b5
-    )
+    $colors-social
 );
