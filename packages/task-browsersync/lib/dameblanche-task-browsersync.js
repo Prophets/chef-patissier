@@ -26,7 +26,6 @@ const browserSyncTask = (done) => {
         const compiler = webpack(webpackConfig);
         server.middleware = [
             require('webpack-dev-middleware')(compiler, {
-                stats: 'minimal',
                 publicPath: pathToUrl('/', webpackConfig.output.publicPath),
             }),
             require('webpack-hot-middleware')(compiler),

@@ -1,0 +1,116 @@
+$hamburger-import:                  true !default;
+
+$hamburger-classname:               'hamburger' !default;
+$hamburger-label-color:             $text-color !default;
+$hamburger-color:                   get-brand-color() !default;
+$hamburger-color-active:            get-brand-color() !default;
+$hamburger-width:                   30px !default;
+$hamburger-height:                  20px !default;
+$hamburger-bar-thickness:           2px !default;
+$hamburger-padding:                 5px !default;
+$hamburger-bar-space:               5px !default;
+$hamburger-border-radius:           8px !default;
+$hamburger-font-size:               $font-size-base !default;
+$hamburger-transition-duration:     0.15s !default;
+
+@if ($hamburger-import) {
+    .#{$hamburger-classname} {
+        transition: opacity $hamburger-transition-duration ease-out, color $hamburger-transition-duration ease-out;
+        color: $hamburger-color;
+        font-size: $hamburger-font-size;
+        font-weight: inherit;
+
+        &:hover, &:focus {
+            outline: none;
+            opacity: 0.6;
+        }
+
+        &__icon {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            width: $hamburger-width;
+            height: $hamburger-height;
+            font-size: 0;
+            text-indent: -9999px;
+            appearance: none;
+            box-shadow: none;
+            border-radius: none;
+            border: 0 none;
+            cursor: pointer;
+            background: transparent;
+            vertical-align: middle;
+            position: relative;
+            top: -1.5px;
+
+            i {
+                display: block;
+                position: absolute;
+                top: $hamburger-height / 2 - $hamburger-bar-thickness / 2;
+                left: $hamburger-padding;
+                right: $hamburger-padding;
+                height: $hamburger-bar-thickness;
+                background: currentColor;
+                transition: background 0s $hamburger-transition-duration;
+                border-radius: $hamburger-border-radius;
+
+                &::before, &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    width: 100%;
+                    height: $hamburger-bar-thickness;
+                    background-color: currentColor;
+                    transition-duration: $hamburger-transition-duration, $hamburger-transition-duration;
+                    transition-delay: $hamburger-transition-duration, 0s;
+                    border-radius: $hamburger-border-radius;
+                }
+
+                &::before {
+                    top: -$hamburger-bar-thickness - $hamburger-bar-space;
+                    transition-property: top, transform;
+                }
+
+                &::after {
+                    bottom: -$hamburger-bar-thickness - $hamburger-bar-space;
+                    transition-property: bottom, transform;
+                }
+            }
+        }
+
+        &__label {
+            color: $hamburger-label-color;
+            line-height: $hamburger-height;
+            display: inline-block;
+        }
+
+        &.is-active {
+            z-index: 1;
+            color: $hamburger-color-active;
+
+            .#{$hamburger-classname}__icon {
+                i {
+                    background: none;
+
+                    &::before, &::after {
+                        transition-delay: 0s, $hamburger-transition-duration;
+                        background-color: currentColor;
+                    }
+
+                    &::before {
+                        top: 0;
+                        transform: rotate(45deg);
+                    }
+
+                    &::after {
+                        bottom: 0;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}

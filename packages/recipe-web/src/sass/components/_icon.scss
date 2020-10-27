@@ -1,8 +1,16 @@
-$b: 'icon';
+$icon-import: true !default;
 
-.#{$b} {
-    width: 1rem;
-    height: 1rem;
-    fill: currentColor;
-    vertical-align: middle;
+$icon-classname: 'icon' !default;
+$icon-vertical-align: middle !default;
+$icon-fill: currentColor !default;
+$icon-width: 1rem !default;
+$icon-height: 1rem !default;
+
+@if ($icon-import) {
+    .#{$icon-classname} {
+        width: $icon-width;
+        height: $icon-height;
+        fill: $icon-fill;
+        vertical-align: $icon-vertical-align;
+    }
 }

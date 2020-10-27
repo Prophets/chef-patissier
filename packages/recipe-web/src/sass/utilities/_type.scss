@@ -15,15 +15,9 @@
 
     &-capitalize { text-transform: capitalize !important; }
 
-    &-strong { font-weight: $font-weight-bold !important; }
+    &-weight-strong { font-weight: $font-weight-bold !important; }
+
+    &-weight-regular { font-weight: $font-weight-regular !important; }
 
     &-italic { font-style: italic !important; }
-
-    @each $key, $value in $colors-brand {
-        &-color-#{$key} { color: get-brand-color(#{$key}) !important; }
-    }
-
-    @each $key, $value in map-get($colors-gray, 'primary') {
-        &-color-gray-#{$key} { color: get-gray-color(#{$key}) !important; }
-    }
 }
