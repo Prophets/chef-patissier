@@ -24,14 +24,14 @@
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
   "dependencies": {
-    "webpack-dev-middleware": "^3.5.2",
-    "webpack-hot-middleware": "^2.21.2"
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
   },
   "peerDependencies": {
     "@dameblanche/core": ">=0",
     "@dameblanche/task-webpack": ">=0",
     "browser-sync": ">=2",
-    "webpack": ">=4"
+    "webpack": ">=5"
   },
   "publishConfig": {
     "access": "public"

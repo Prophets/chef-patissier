@@ -11,7 +11,7 @@ module.exports = function(publicPath, dest, filename = 'rev-manifest.json') {
             for (let key in chunks) {
                 if (Object.prototype.hasOwnProperty.call(chunks, key)) {
                     const originalFilename = key + '.js';
-                    manifest[path.join(publicPath, originalFilename)] = path.join(publicPath, chunks[key]);
+                    manifest[path.join(publicPath, originalFilename)] = path.join(publicPath, chunks[key][0]);
                 }
             }
 
