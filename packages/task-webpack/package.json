@@ -24,7 +24,7 @@
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
   "dependencies": {
-    "ansi-colors": "^3.2.4",
+    "ansi-colors": "^4.1.1",
     "babel-loader": "^8.1.0"
   },
   "peerDependencies": {

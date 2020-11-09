@@ -24,7 +24,7 @@
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
   "dependencies": {
-    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-middleware": "^4.0.0",
     "webpack-hot-middleware": "^2.25.0"
   },
   "peerDependencies": {

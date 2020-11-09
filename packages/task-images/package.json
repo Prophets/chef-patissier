@@ -24,12 +24,12 @@
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
   "dependencies": {
-    "gulp-changed": "^3.2.0",
-    "gulp-imagemin": "^5.0.3",
-    "imagemin-gifsicle": "^6.0.1",
-    "imagemin-jpegtran": "^6.0.0",
-    "imagemin-optipng": "^6.0.0",
-    "imagemin-svgo": "^7.0.0"
+    "gulp-changed": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^8.0.0"
   },
   "peerDependencies": {
     "@dameblanche/core": ">=0",

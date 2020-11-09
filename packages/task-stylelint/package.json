@@ -24,8 +24,8 @@
     "url": "https://github.com/Prophets/dameblanche/issues"
   },
   "dependencies": {
-    "gulp-stylelint": "^8.0.0",
-    "stylelint": "^9.10.1"
+    "gulp-stylelint": "^13.0.0",
+    "stylelint": "^13.7.2"
   },
   "peerDependencies": {
     "@dameblanche/core": ">=0",
