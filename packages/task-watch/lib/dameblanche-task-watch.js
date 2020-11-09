@@ -12,7 +12,7 @@ const watchFiles = () => {
         if (taskName !== 'clean') {
             const task = config.getTaskConfig(taskName);
             if (!task.disableWatch) {
-                const glob = path.join(config.root.src, task.src, '**/*.{' + task.extensions.join(',') + '}');
+                const glob = path.join(config.root.src, task.src, '**/*.+(' + task.extensions.join('|') + ')');
                 gulp.watch(glob, { usePolling: true }, taskRequire(taskName));
             }
         }

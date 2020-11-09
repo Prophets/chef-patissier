@@ -37,6 +37,7 @@ module.exports = (env) => {
             filename: filenamePattern,
             publicPath: publicPath,
         },
+        stats: 'minimal',
     };
 
     if (env === 'development') {
