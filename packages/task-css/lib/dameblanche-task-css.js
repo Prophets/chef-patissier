@@ -6,6 +6,7 @@ const gulp = require('gulp');
 const taskRequire = require('@dameblanche/core/lib/taskRequire');
 const browserSync = taskRequire('browsersync').browserSync;
 const sass = require('gulp-sass');
+const postcss = require('postcss');
 const path = require('path');
 const handleErrors = require('@dameblanche/core/lib/handleErrors');
 const customNotifier = require('@dameblanche/core/lib/customNotifier');
