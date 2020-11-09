@@ -1,6 +1,6 @@
 {
   "name": "@dameblanche/recipe-mail",
-  "version": "0.0.1-alpha.6",
+  "version": "0.0.1-alpha.7",
   "description": "> TODO: description",
   "author": "Samuel Joos <sjoos@prophets.be>",
   "homepage": "https://github.com/Prophets/dameblanche/tree/master/packages/dameblanche-recipe-mail#readme",
@@ -22,7 +22,7 @@
     "@dameblanche/task-browsersync": "^0.0.1-alpha.6",
     "@dameblanche/task-cdn": "^0.0.1-alpha.5",
     "@dameblanche/task-clean": "^0.0.1-alpha.6",
-    "@dameblanche/task-css": "^0.0.1-alpha.6",
+    "@dameblanche/task-css": "^0.0.1-alpha.7",
     "@dameblanche/task-default": "^0.0.1-alpha.5",
     "@dameblanche/task-eslint": "^0.0.1-alpha.6",
     "@dameblanche/task-images": "^0.0.1-alpha.6",
